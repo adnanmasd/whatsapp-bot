@@ -17,4 +17,4 @@ uvicorn app.main:app --reload
 
 Use Ngrok to expose port 8000 to WhatsApp Webhook.
 
-Run ngrok first. Then update the URL in Ultramsg webhook. Then just fire the server up and send message to 966549045141
+Run ngrok first. Then update the URL in Ultramsg webhook. Then just fire the server up and send messages
