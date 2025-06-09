@@ -1,0 +1,235 @@
+{
+  "choose_lang": {
+    "prompt": {
+      "en": "Choose language:\n1. English\n2. Arabic",
+      "ar": "اختر لغة:\n1. الإنجليزية\n2. العربية"
+    },
+    "next": {
+      "1": "main_menu_en",
+      "2": "main_menu_ar"
+    }
+  },
+  "main_menu_en": {
+    "prompt": {
+      "en": "Main Menu:\n1. Products\n2. Services\n3. Submit Request\nType 'restart' to change language"
+    },
+    "next": {
+      "1": "products_en",
+      "2": "services_en",
+      "3": "form_name_en",
+      "restart": "choose_lang"
+    }
+  },
+  "main_menu_ar": {
+    "prompt": {
+      "ar": "القائمة الرئيسية:\n1. المنتجات\n2. الخدمات\n3. تقديم طلب\nاكتب 'restart' لتغيير اللغة"
+    },
+    "next": {
+      "1": "products_ar",
+      "2": "services_ar",
+      "3": "form_name_ar",
+      "restart": "choose_lang"
+    }
+  },
+  "products_en": {
+    "prompt": {
+      "en": "Choose a product:\na. Product A\nb. Product B\nType 'back' to return"
+    },
+    "next": {
+      "a": "product_a_en",
+      "b": "product_b_en",
+      "back": "main_menu_en"
+    }
+  },
+  "products_ar": {
+    "prompt": {
+      "ar": "اختر منتجاً:\na. المنتج أ\nb. المنتج ب\nاكتب 'back' للعودة"
+    },
+    "next": {
+      "a": "product_a_ar",
+      "b": "product_b_ar",
+      "back": "main_menu_ar"
+    }
+  },
+  "product_a_en": {
+    "prompt": {
+      "en": "Product A is powerful and reliable.\nType 'back' to return"
+    },
+    "next": {
+      "back": "products_en"
+    }
+  },
+  "product_b_en": {
+    "prompt": {
+      "en": "Product B is affordable and efficient.\nType 'back' to return"
+    },
+    "next": {
+      "back": "products_en"
+    }
+  },
+  "product_a_ar": {
+    "prompt": {
+      "ar": "المنتج أ قوي وموثوق.\nاكتب 'back' للعودة"
+    },
+    "next": {
+      "back": "products_ar"
+    }
+  },
+  "product_b_ar": {
+    "prompt": {
+      "ar": "المنتج ب ميسور وفعال.\nاكتب 'back' للعودة"
+    },
+    "next": {
+      "back": "products_ar"
+    }
+  },
+
+  "services_en": {
+    "prompt": {
+      "en": "Our services include:\n1. Consulting\n2. Support\nType 'back' to return"
+    },
+    "next": {
+      "1": "consulting_en",
+      "2": "support_en",
+      "back": "main_menu_en"
+    }
+  },
+  "services_ar": {
+    "prompt": {
+      "ar": "خدماتنا تشمل:\n1. الاستشارات\n2. الدعم\nاكتب 'back' للعودة"
+    },
+    "next": {
+      "1": "consulting_ar",
+      "2": "support_ar",
+      "back": "main_menu_ar"
+    }
+  },
+  "consulting_en": {
+    "prompt": {
+      "en": "We offer expert consulting.\nType 'back' to return"
+    },
+    "next": {
+      "back": "services_en"
+    }
+  },
+  "support_en": {
+    "prompt": {
+      "en": "We offer 24/7 support.\nType 'back' to return"
+    },
+    "next": {
+      "back": "services_en"
+    }
+  },
+  "consulting_ar": {
+    "prompt": {
+      "ar": "نقدم استشارات خبيرة.\nاكتب 'back' للعودة"
+    },
+    "next": {
+      "back": "services_ar"
+    }
+  },
+  "support_ar": {
+    "prompt": {
+      "ar": "نقدم دعم على مدار الساعة.\nاكتب 'back' للعودة"
+    },
+    "next": {
+      "back": "services_ar"
+    }
+  },
+
+  "form_name_en": {
+    "prompt": {
+      "en": "Please enter your full name:"
+    },
+    "form_field": "name",
+    "next": "form_email_en"
+  },
+  "form_email_en": {
+    "prompt": {
+      "en": "Please enter your email address:"
+    },
+    "validation": {
+      "type": "email"
+    },
+    "form_field": "email",
+    "next": "form_phone_en"
+  },
+  "form_phone_en": {
+    "prompt": {
+      "en": "Please enter your phone number:"
+    },
+    "form_field": "phone",
+    "validation": {
+      "type": "phone"
+    },
+    "next": "form_complete_en"
+  },
+  "form_complete_en": {
+    "prompt": {
+      "en": "Thank you! Your request has been recorded."
+    },
+    "next": "main_menu_en",
+    "actions": [
+      {
+        "type": "post_data_test",
+        "url": "https://thirdparty.example/api/submit",
+        "method": "POST",
+        "payload_map": {
+          "fullName": "name",
+          "emailAddress": "email",
+          "phoneNumber": "phone"
+        }
+      },
+      {
+        "type": "send_message",
+        "message": {
+          "en": "We will contact you shortly.",
+          "ar": "سنتواصل معك قريباً."
+        }
+      }
+    ]
+  },
+
+  "form_name_ar": {
+    "prompt": {
+      "ar": "الرجاء إدخال اسمك الكامل:"
+    },
+    "form_field": "name",
+    "next": "form_email_ar"
+  },
+  "form_email_ar": {
+    "prompt": {
+      "ar": "الرجاء إدخال بريدك الإلكتروني:"
+    },
+    "validation": {
+      "type": "email"
+    },
+    "form_field": "email",
+    "next": "form_phone_ar"
+  },
+  "form_phone_ar": {
+    "prompt": {
+      "ar": "الرجاء إدخال رقم هاتفك:"
+    },
+    "validation": {
+      "type": "phone"
+    },
+    "form_field": "phone",
+    "next": "form_complete_ar"
+  },
+  "form_complete_ar": {
+    "prompt": {
+      "ar": "شكراً! تم تسجيل طلبك."
+    },
+    "next": "main_menu_ar",
+    "actions": [
+      {
+        "type": "send_message",
+        "message": {
+          "en": "We will contact you shortly.",
+          "ar": "سنتواصل معك قريباً."
+        }
+      }
+    ]
+  }
+}
